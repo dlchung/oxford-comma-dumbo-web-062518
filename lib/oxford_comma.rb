@@ -5,7 +5,7 @@ def oxford_comma(array)
       new_string << " and "
       new_string << element
     elsif
-      new_string << " #{element},"
+      new_string << "#{element},"
     end
   end
   return new_string
