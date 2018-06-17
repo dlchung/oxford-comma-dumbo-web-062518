@@ -2,7 +2,7 @@ def oxford_comma(array)
   new_string = ""
   array.each_with_index do |element, index|
     if array.size > 1
-      if index == array.size - 1
+      if index == array.size - 1 ## if 2nd to last element
         new_string << "and "
         new_string << element
       elsif array.size == 2
