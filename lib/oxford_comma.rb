@@ -4,9 +4,12 @@ def oxford_comma(array)
   else
     new_array = []
     array.each_with_index do |element, index|
-      new_array.push("#{element},)
-      if array.size - index == 1
-        new_array.push("and")
+      if index < array.size - 1
+        new_array.push("#{element},")
+      else
+        if array.size - index == 1
+          new_array.push("and")
+        end
       end
     end
   end
