@@ -2,7 +2,12 @@ def oxford_comma(array)
   if(array.size == 2)
     array.join(" and ")
   else
-    array.insert(-2, "and")
-    array.join(", ")
+    new_array = []
+    array.each_with_index do |element, index|
+      new_array.push("#{element},)
+      if array.size - index == 1
+        new_array.push("and")
+      end
+    end
   end
 end
