@@ -7,6 +7,8 @@ def oxford_comma(array)
         new_string << element
       elsif array.size == 2
         new_string << "#{element} "
+      else
+        new_string << "#{element}, "
       end
     else
       new_string = element
